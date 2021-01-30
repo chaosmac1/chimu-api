@@ -19,7 +19,7 @@ def InitializeMySQL():
          database  = environ.get('MYSQL_DATABASE'),
          port      = 3306,
          pool_name = 'chimu-api-v1',
-         pool_size = 64
+         pool_size = 16
       )
 
       print('MySQL: Test for connection')
