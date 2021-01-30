@@ -4,6 +4,7 @@ from chimu.v1.error_codes import *
 from starlette.responses import JSONResponse, RedirectResponse
 from starlette.requests import Request
 
+
 async def download_set(request: Request):
     set_id = request.path_params.get('set_id')
     key = request.query_params.get('k')
@@ -26,10 +27,10 @@ async def download_set(request: Request):
         beatmap = await RequestDownload(set_id, no_video)
         if beatmap == None:
             return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')
-        
+
         if beatmap['IpfsHash'] == None or beatmap['IpfsHash'] == '':
             return Error(404, ERR_CODE_BEATMAP_UNAVAILABLE, f'Error: Beatmap unavailable!')
-      
+
         return RedirectResponse(f'https://ipfs.chimu.moe/ipfs/{beatmap["IpfsHash"]}?filename={beatmap["File"]}')
 
     return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')

@@ -10,13 +10,15 @@ ERR_CODE_BEATMAP_NOT_FOUND = 104
 ERR_CODE_BEATMAP_UNAVAILABLE = 105
 ERR_CODE_NO_SEARCH_RESULTS = 106
 
-def Success(data = [ ]):
+
+def Success(data=[]):
     return Error(200, ERR_CODE_OK, '', data)
 
-def Error(status_code, error_code, msg, data = [ ]):
+
+def Error(status_code, error_code, msg, data=[]):
     return JSONResponse(
-    { 
-        'code': error_code,
-        'message': msg,
-        'data': data
-    }, status_code)
+        {
+            'code': error_code,
+            'message': msg,
+            'data': data
+        }, status_code)

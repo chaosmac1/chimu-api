@@ -5,10 +5,12 @@ from os import environ
 meiliClient: meilisearch.Client
 meiliIndex: meilisearch.index.Index
 
+
 def InitializeMeili():
     print('MeiliSearch: Initializing...')
 
-    client = meilisearch.Client(environ.get('MEILI_HOST'), environ.get('MEILI_KEY'))
+    client = meilisearch.Client(environ.get(
+        'MEILI_HOST'), environ.get('MEILI_KEY'))
 
     try:
         print('MeiliSearch: Test for connection')
@@ -18,7 +20,7 @@ def InitializeMeili():
         print('Exiting...')
         exit(1)
 
-    index  = client.index(environ.get('MEILI_INDEX'))
+    index = client.index(environ.get('MEILI_INDEX'))
 
     global meiliClient
     global meiliIndex
@@ -27,6 +29,7 @@ def InitializeMeili():
     meiliIndex = index
 
     print('MeiliSearch: Success')
+
 
 def SearchForBeatmap(query: str, amount: int, offset: int,
                      rankedStatus: int = -1, mode: int = -1,
@@ -40,7 +43,7 @@ def SearchForBeatmap(query: str, amount: int, offset: int,
     filterQuery = ""
     if mode != -1:
         filterQuery += f"mode = {mode} "
-    
+
     if rankedStatus != -1:
         if filterQuery != "":
             filterQuery += " AND "
@@ -141,13 +144,12 @@ def SearchForBeatmap(query: str, amount: int, offset: int,
         filterQuery = None
 
     result = meiliIndex.search(query,
-    {
-        'attributesToHighlight': [ "title", "artist", "tags", "creator", "diffName" ],
-        'limit': amount,
-        'offset': offset,
-        'filters': filterQuery,
-        'matches': True
-    })
+                               {
+                                   'attributesToHighlight': ["title", "artist", "tags", "creator", "diffName"],
+                                   'limit': amount,
+                                   'offset': offset,
+                                   'filters': filterQuery,
+                                   'matches': True
+                               })
 
     return result['hits']
-

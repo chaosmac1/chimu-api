@@ -16,6 +16,7 @@ InitializeRedis()
 InitializeMySQL()
 InitializeMeili()
 
+
 async def homepage(request):
     return JSONResponse({'hello': 'world'})
 
@@ -26,4 +27,3 @@ app = Starlette(debug=True, routes=[
     Route('/api/v1/set/{set_id}', get_set),
     Route('/api/v1/search', search),
 ])
-
