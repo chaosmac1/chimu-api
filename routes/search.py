@@ -1,7 +1,7 @@
 
 from chimu.v1.utils.mysql import GetDatabasePool
 from chimu.v1.utils.meili import SearchForBeatmap
-from chimu.v1.error_codes import ERR_CODE_INT_ERROR, Error, Success
+from chimu.v1.error_codes import ERR_CODE_INT_ERROR, ERR_CODE_NO_SEARCH_RESULTS, Error, Success
 from starlette.requests import Request
 
 
@@ -116,6 +116,9 @@ async def search(request: Request):
         min_ar, max_ar, min_od, max_od, min_cs, max_cs, min_hp, max_hp,
         min_diff, max_diff, min_bpm, max_bpm, min_length, max_length,
         genre, language)
+
+    if len(beatmaps) <= 0:
+        return Error(404, ERR_CODE_NO_SEARCH_RESULTS, 'Error: No search results!')
 
     conn = GetDatabasePool().get_connection()
     cursor = conn.cursor()
