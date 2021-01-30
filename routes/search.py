@@ -181,4 +181,6 @@ async def search(request: Request):
     for set in beatmapSetRaw.values():
         beatmapSets.append(set)
 
+    conn.close()
+
     return Success(beatmapSets)
