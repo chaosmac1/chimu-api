@@ -1,0 +1,7 @@
+mariadb==1.0.5
+meilisearch==0.14.0
+python-dotenv==0.15.0
+redis==3.5.3
+requests==2.25.1
+starlette==0.14.1
+uvicorn==0.13.3
