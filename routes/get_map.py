@@ -4,7 +4,6 @@ from starlette.requests import Request
 
 async def get_map(request: Request):
     map_id = int(request.path_params['map_id'])
-    raw = request.query_params['raw'] != None
 
     conn = GetDatabasePool().get_connection()
     cursor = conn.cursor()
