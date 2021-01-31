@@ -1,9 +1,14 @@
+import datadog
+
 from chimu.v1.error_codes import ERR_CODE_BEATMAP_NOT_FOUND, ERR_CODE_INT_ERROR, Error, Success
 from chimu.v1.utils.mysql import GetDatabaseConnection
 from starlette.requests import Request
 
 
 async def get_set(request: Request):
+    datadog.statsd.increment('chimu.api.v1.get_set',
+                             tags=["version:1", "application:web"])
+
     set_id = request.path_params['set_id']
     if set_id.isdigit() == None:
         return Error(401, ERR_CODE_INT_ERROR, f'Error: set_id is not an int!')

@@ -1,3 +1,4 @@
+import datadog
 
 from chimu.v1.utils.mysql import GetDatabaseConnection
 from chimu.v1.utils.meili import SearchForBeatmap
@@ -29,6 +30,9 @@ def get_query_value(request: Request, name: str, default, is_int: bool = False, 
 
 
 async def search(request: Request):
+    datadog.statsd.increment('chimu.api.v1.search',
+                             tags=["version:1", "application:web"])
+
     query = get_query_value(request, "query", "")
     amount = get_query_value(request, "amount", 100, True)
     if amount == None:

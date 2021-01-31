@@ -1,6 +1,7 @@
 from chimu.v1.routes.search import search
 from chimu.v1.utils.meili import InitializeMeili
 from chimu.v1.utils.mysql import InitializeMySQL
+from chimu.v1.utils.datadog import InitializeDatadog
 from chimu.v1.routes.get_set import get_set
 from chimu.v1.routes.get_map import get_map
 from chimu.v1.utils.redis import InitializeRedis
@@ -15,6 +16,7 @@ load_dotenv()
 InitializeRedis()
 InitializeMySQL()
 InitializeMeili()
+InitializeDatadog()
 
 
 async def homepage(request):
