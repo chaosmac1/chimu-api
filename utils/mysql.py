@@ -48,7 +48,7 @@ def GetDatabasePool():
 
 def GetDatabaseConnection():
     try:
-        return GetDatabasePool().get_connection()
+        return dbPool.get_connection()
     except mariadb.PoolError as e:
         print("Failed to receive Pool!")
         print(e)
@@ -57,7 +57,5 @@ def GetDatabaseConnection():
             password=environ.get('MYSQL_PASSWORD'),
             host=environ.get('MYSQL_HOSTNAME'),
             database=environ.get('MYSQL_DATABASE'),
-            port=3306,
-            pool_name='chimu-api-v1',
-            pool_size=16
+            port=3306
         )
