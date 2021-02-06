@@ -1,0 +1,1 @@
+GET http://127.0.0.1:8000/api/v1/search?q=peppy&amount=1&offset=1 HTTP/1.1

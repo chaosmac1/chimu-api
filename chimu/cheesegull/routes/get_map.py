@@ -1,8 +1,9 @@
 import datadog
 
-from chimu.v1.error_codes import ERR_CODE_BEATMAP_NOT_FOUND, ERR_CODE_INT_ERROR, Error, Success
-from chimu.v1.utils.mysql import GetDatabaseConnection
+from starlette.responses import JSONResponse
 from starlette.requests import Request
+
+from chimu.shared.utils.mysql import GetDatabaseConnection
 
 
 async def get_map(request: Request):
@@ -10,9 +11,8 @@ async def get_map(request: Request):
                              tags=["version:1", "application:web"])
 
     map_id = request.path_params['map_id']
-    if map_id.isdigit() == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: map_id is not an int!')
-
+    if not map_id.isdigit():
+        return JSONResponse(None)
     map_id = int(map_id)
 
     with GetDatabaseConnection() as conn:
@@ -22,10 +22,10 @@ async def get_map(request: Request):
             'SELECT * FROM Beatmaps WHERE BeatmapId = ? LIMIT 1', (map_id,))
 
         for bm in cursor:
-            return Success(
+            return JSONResponse(
                 {
-                    'BeatmapId': bm[0],
-                    'ParentSetId': bm[1],
+                    'BeatmapID': bm[0],
+                    'ParentSetID': bm[1],
                     'DiffName': bm[2],
                     'FileMD5': bm[3],
                     'Mode': bm[4],
@@ -40,9 +40,7 @@ async def get_map(request: Request):
                     'Passcount': bm[13],
                     'MaxCombo': bm[14],
                     'DifficultyRating': bm[15],
-                    'OsuFile': bm[16],
-                    'DownloadPath': f'/d/{bm[1]}'
                 }
             )
 
-    return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, 'Error: Beatmap not found!')
+    return JSONResponse(None, 404)

@@ -1,0 +1,1 @@
+GET http://127.0.0.1:8000/api/cheesegull/b/53 HTTP/1.1

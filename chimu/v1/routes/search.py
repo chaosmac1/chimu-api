@@ -1,7 +1,7 @@
 import datadog
 
-from chimu.v1.utils.mysql import GetDatabaseConnection
-from chimu.v1.utils.meili import SearchForBeatmap
+from chimu.shared.utils.mysql import GetDatabaseConnection
+from chimu.shared.utils.meili import SearchForBeatmap
 from chimu.v1.error_codes import ERR_CODE_INT_ERROR, ERR_CODE_NO_SEARCH_RESULTS, Error, Success
 from starlette.requests import Request
 

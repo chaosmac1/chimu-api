@@ -1,5 +1,5 @@
-from chimu.v1.utils.redis import RequestDownload
-from chimu.v1.utils.hcaptcha import VerifyHCaptchaAccessToken
+from chimu.shared.utils.redis import RequestDownload
+from chimu.shared.utils.hcaptcha import VerifyHCaptchaAccessToken
 from chimu.v1.error_codes import *
 from starlette.responses import JSONResponse, RedirectResponse
 from starlette.requests import Request
