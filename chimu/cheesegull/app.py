@@ -26,6 +26,6 @@ async def homepage(request):
 app = Starlette(routes=[
     Route('/', homepage),
     Route('/api/cheesegull/b/{map_id}', get_map),
-    Route('/api/cheesegull/b/{set_id}', get_set),
+    Route('/api/cheesegull/s/{set_id}', get_set),
     Route('/api/cheesegull/search', search),
 ])
