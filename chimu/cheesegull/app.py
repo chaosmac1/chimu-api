@@ -23,8 +23,9 @@ InitializeDatadog()
 async def homepage(request):
     return JSONResponse({'hello': 'world'})
 
-app = Starlette(debug=True, routes=[
+app = Starlette(routes=[
     Route('/', homepage),
     Route('/api/cheesegull/b/{map_id}', get_map),
+    Route('/api/cheesegull/b/{set_id}', get_set),
     Route('/api/cheesegull/search', search),
 ])
