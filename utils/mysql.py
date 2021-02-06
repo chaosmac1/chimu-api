@@ -52,7 +52,7 @@ def GetDatabaseConnection():
     except mariadb.PoolError as e:
         print("Failed to receive Pool!")
         print(e)
-        return mariadb.connect(
+        return mariadb.connection(
             user=environ.get('MYSQL_USERNAME'),
             password=environ.get('MYSQL_PASSWORD'),
             host=environ.get('MYSQL_HOSTNAME'),
