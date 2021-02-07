@@ -150,11 +150,11 @@ async def search(request: Request):
                 'Creator': set[7],
                 'Source': set[8],
                 'Tags': set[9],
-                'HasVideo': set[10],
+                'HasVideo': set[10] == 1,
                 'Genre': set[11],
                 'Language': set[12],
                 'Favourites': set[13],
-                'Disabled': set[14],
+                'Disabled': set[14] == 1,
             }
 
         cursor.execute(
