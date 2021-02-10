@@ -44,7 +44,7 @@ def SearchForBeatmap(query: str, amount: int, offset: int,
     if mode != -1:
         filterQuery += f"mode = {mode} "
 
-    if rankedStatus != -1:
+    if rankedStatus != -5:
         if filterQuery != "":
             filterQuery += " AND "
 

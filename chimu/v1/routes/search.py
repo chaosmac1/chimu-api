@@ -14,12 +14,12 @@ def get_query_value(request: Request, name: str, default, is_int: bool = False, 
         return v
 
     if is_int:
-        if not q.isdigit():
+        if not q.lstrip('-').isdigit():
             return None
         else:
             v = int(q)
     elif is_float:
-        if not q.isdigit():
+        if not q.lstrip('-').isdigit():
             return None
         else:
             v = float(q)
@@ -42,13 +42,13 @@ async def search(request: Request):
     if offset == None:
         return Error(401, ERR_CODE_INT_ERROR, f'Error: offset is not an int!')
 
-    rankedStatus = get_query_value(request, "status", -1, True)
+    rankedStatus = get_query_value(request, "status", -5, True)
     if rankedStatus == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: rankedStatus is not an int!')
+        return Error(401, ERR_CODE_INT_ERROR, f'Error: status is not an int!')
 
     playMode = get_query_value(request, "mode", -1, True)
     if playMode == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: playMode is not an int!')
+        return Error(401, ERR_CODE_INT_ERROR, f'Error: mode is not an int!')
 
     min_ar = get_query_value(request, "min_ar", -1, False, True)
     if rankedStatus == None:

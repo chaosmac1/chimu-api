@@ -39,19 +39,19 @@ async def search(request: Request):
     query = get_query_value(request, "query", "")
     amount = get_query_value(request, "amount", 100, True)
     if amount == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: amount is not an int!')
+        return JSONResponse(None)
 
     offset = get_query_value(request, "offset", 0, True)
     if offset == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: offset is not an int!')
+        return JSONResponse(None)
 
-    rankedStatus = get_query_value(request, "status", -1, True)
+    rankedStatus = get_query_value(request, "status", -5, True)
     if rankedStatus == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: rankedStatus is not an int!')
+        return JSONResponse(None)
 
     playMode = get_query_value(request, "mode", -1, True)
     if playMode == None:
-        return Error(401, ERR_CODE_INT_ERROR, f'Error: playMode is not an int!')
+        return JSONResponse(None)
 
     if amount > 100:
         amount = 100
@@ -59,7 +59,7 @@ async def search(request: Request):
     beatmaps = SearchForBeatmap(query, amount, offset, rankedStatus, playMode)
 
     if len(beatmaps) <= 0:
-        return Error(404, ERR_CODE_NO_SEARCH_RESULTS, 'Error: No search results!')
+        return JSONResponse(None)
 
     with GetDatabaseConnection() as conn:
         cursor = conn.cursor()
