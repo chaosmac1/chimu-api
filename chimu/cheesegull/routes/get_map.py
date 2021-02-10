@@ -3,6 +3,7 @@ import datadog
 from starlette.responses import JSONResponse
 from starlette.requests import Request
 
+from chimu.shared.utils.digit import isDigit
 from chimu.shared.utils.mysql import GetDatabaseConnection
 
 
@@ -11,7 +12,7 @@ async def get_map(request: Request):
                              tags=["version:1", "application:web"])
 
     map_id = request.path_params['map_id']
-    if not map_id.isdigit():
+    if not isDigit(map_id):
         return JSONResponse(None)
     map_id = int(map_id)
 

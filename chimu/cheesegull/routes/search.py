@@ -3,7 +3,7 @@ import datadog
 from chimu.shared.utils.mysql import GetDatabaseConnection
 from chimu.shared.utils.meili import SearchForBeatmap
 
-from chimu.v1.error_codes import ERR_CODE_INT_ERROR, ERR_CODE_NO_SEARCH_RESULTS, Error, Success
+from chimu.shared.utils.digit import isDigit
 
 from starlette.requests import Request
 from starlette.responses import JSONResponse
@@ -17,12 +17,12 @@ def get_query_value(request: Request, name: str, default, is_int: bool = False, 
         return v
 
     if is_int:
-        if not q.isdigit():
+        if not isDigit(q.lstrip('-')):
             return None
         else:
             v = int(q)
     elif is_float:
-        if not q.isdigit():
+        if not isDigit(q.lstrip('-')):
             return None
         else:
             v = float(q)

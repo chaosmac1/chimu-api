@@ -1,3 +1,4 @@
+from chimu.shared.utils.digit import isDigit
 import datadog
 
 from chimu.v1.error_codes import ERR_CODE_BEATMAP_NOT_FOUND, ERR_CODE_INT_ERROR, Error, Success
@@ -10,7 +11,7 @@ async def get_set(request: Request):
                              tags=["version:1", "application:web"])
 
     set_id = request.path_params['set_id']
-    if not set_id.isdigit():
+    if not isDigit(set_id):
         return Error(401, ERR_CODE_INT_ERROR, f'Error: set_id is not an int!')
     set_id = int(set_id)
 

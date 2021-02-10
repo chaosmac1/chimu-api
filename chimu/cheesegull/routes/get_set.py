@@ -3,6 +3,7 @@ import datadog
 from starlette.responses import JSONResponse
 from starlette.requests import Request
 
+from chimu.shared.utils.digit import isDigit
 from chimu.shared.utils.mysql import GetDatabaseConnection
 
 
@@ -11,7 +12,7 @@ async def get_set(request: Request):
                              tags=["version:1", "application:web"])
 
     set_id = request.path_params['set_id']
-    if not set_id.isdigit():
+    if not isDigit(set_id):
         return JSONResponse(None)
     set_id = int(set_id)
 

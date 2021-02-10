@@ -1,3 +1,4 @@
+from chimu.shared.utils.digit import isDigit
 from chimu.shared.utils.redis import RequestDownload
 from chimu.shared.utils.hcaptcha import VerifyHCaptchaAccessToken
 from chimu.v1.error_codes import *
@@ -15,7 +16,7 @@ async def download_set(request: Request):
         return Error(403, ERR_CODE_KEY_REQUIRED, 'Error: key is not set!')
     elif state == None:
         return Error(403, ERR_CODE_STATE_NOT_SET, 'Error: state is not set!')
-    elif not set_id.isdigit() or set_id == None:
+    elif not isDigit(set_id) or set_id == None:
         return Error(401, ERR_CODE_INT_ERROR, f'Error: {set_id} is not an int!')
     elif no_video == None:
         no_video = False

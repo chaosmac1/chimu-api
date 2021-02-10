@@ -1,3 +1,4 @@
+from chimu.shared.utils.digit import isDigit
 import datadog
 
 from chimu.v1.error_codes import ERR_CODE_BEATMAP_NOT_FOUND, ERR_CODE_INT_ERROR, Error, Success
@@ -10,7 +11,7 @@ async def get_map(request: Request):
                              tags=["version:1", "application:web"])
 
     map_id = request.path_params['map_id']
-    if not map_id.isdigit():
+    if not isDigit(map_id):
         return Error(401, ERR_CODE_INT_ERROR, f'Error: map_id is not an int!')
     map_id = int(map_id)
 

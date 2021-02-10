@@ -1,3 +1,4 @@
+from chimu.shared.utils.digit import isDigit
 import datadog
 
 from chimu.shared.utils.mysql import GetDatabaseConnection
@@ -14,12 +15,12 @@ def get_query_value(request: Request, name: str, default, is_int: bool = False, 
         return v
 
     if is_int:
-        if not q.lstrip('-').isdigit():
+        if not isDigit(q.lstrip('-')):
             return None
         else:
             v = int(q)
     elif is_float:
-        if not q.lstrip('-').isdigit():
+        if not isDigit(q.lstrip('-')):
             return None
         else:
             v = float(q)
