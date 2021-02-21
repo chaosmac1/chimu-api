@@ -21,6 +21,18 @@ def InitializeMeili():
         exit(1)
 
     index = client.index(environ.get('MEILI_INDEX'))
+    index.update_settings(
+        {
+            'rankingRules': [
+                "desc(approvedDate)",
+                "typo",
+                "words",
+                "proximity",
+                "attribute",
+                "wordsPosition",
+                "exactness"
+            ],
+        })
 
     global meiliClient
     global meiliIndex
