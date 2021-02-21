@@ -14,6 +14,12 @@ redisDb = environ.get('REDIS_DATABASE')
 downloadMap = {}
 
 
+def GetRedisClient():
+    global redisClient
+
+    return redisClient
+
+
 def InitializeRedis():
     print('Redis: Initializing...')
 
