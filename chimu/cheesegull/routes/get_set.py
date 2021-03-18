@@ -54,24 +54,24 @@ async def get_set(request: Request):
                     'DifficultyRating': bm[15],
                 })
 
-                beatmapSet = {
-                    'SetID': set[0],
-                    'ChildrenBeatmaps': children,
-                    'RankedStatus': set[1],
-                    'ApprovedDate': set[2].isoformat() + "Z" if set[2] else '',
-                    'LastUpdate': set[3].isoformat() + "Z" if set[3] else '',
-                    'LastChecked': set[4].isoformat() + "Z" if set[4] else '',
-                    'Artist': set[5],
-                    'Title': set[6],
-                    'Creator': set[7],
-                    'Source': set[8],
-                    'Tags': set[9],
-                    'HasVideo': set[10] == 1,
-                    'Genre': set[11],
-                    'Language': set[12],
-                    'Favourites': set[13],
-                }
+            beatmapSet = {
+                'SetID': set[0],
+                'ChildrenBeatmaps': children,
+                'RankedStatus': set[1],
+                'ApprovedDate': set[2].isoformat() + "Z" if set[2] else '',
+                'LastUpdate': set[3].isoformat() + "Z" if set[3] else '',
+                'LastChecked': set[4].isoformat() + "Z" if set[4] else '',
+                'Artist': set[5],
+                'Title': set[6],
+                'Creator': set[7],
+                'Source': set[8],
+                'Tags': set[9],
+                'HasVideo': set[10] == 1,
+                'Genre': set[11],
+                'Language': set[12],
+                'Favourites': set[13],
+            }
 
-                return JSONResponse(beatmapSet)
+            return JSONResponse(beatmapSet)
 
     return JSONResponse(None)

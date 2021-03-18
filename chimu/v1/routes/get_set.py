@@ -55,25 +55,25 @@ async def get_set(request: Request):
                     'DownloadPath': f'/d/{bm[1]}'
                 })
 
-                beatmapSet = {
-                    'SetId': set[0],
-                    'ChildrenBeatmaps': children,
-                    'RankedStatus': set[1],
-                    'ApprovedDate': set[2].isoformat() if set[2] else '',
-                    'LastUpdate': set[3].isoformat() if set[3] else '',
-                    'LastChecked': set[4].isoformat() if set[4] else '',
-                    'Artist': set[5],
-                    'Title': set[6],
-                    'Creator': set[7],
-                    'Source': set[8],
-                    'Tags': set[9],
-                    'HasVideo': set[10] == 1,
-                    'Genre': set[11],
-                    'Language': set[12],
-                    'Favourites': set[13],
-                    'Disabled': set[14] == 1,
-                }
+            beatmapSet = {
+                'SetId': set[0],
+                'ChildrenBeatmaps': children,
+                'RankedStatus': set[1],
+                'ApprovedDate': set[2].isoformat() if set[2] else '',
+                'LastUpdate': set[3].isoformat() if set[3] else '',
+                'LastChecked': set[4].isoformat() if set[4] else '',
+                'Artist': set[5],
+                'Title': set[6],
+                'Creator': set[7],
+                'Source': set[8],
+                'Tags': set[9],
+                'HasVideo': set[10] == 1,
+                'Genre': set[11],
+                'Language': set[12],
+                'Favourites': set[13],
+                'Disabled': set[14] == 1,
+            }
 
-                return Success(beatmapSet)
+            return Success(beatmapSet)
 
     return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, 'Error: Beatmap set not found!')
