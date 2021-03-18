@@ -19,7 +19,7 @@ async def download_set(request: Request):
     if not isDigit(set_id) or set_id == None:
         return Error(401, ERR_CODE_INT_ERROR, f'Error: {set_id} is not an int!')
     
-    if no_video == None:
+    if !no_video:
         no_video = False
 
     #if state == 'hcaptcha':
