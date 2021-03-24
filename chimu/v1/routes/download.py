@@ -4,7 +4,7 @@ from chimu.shared.utils.hcaptcha import VerifyHCaptchaAccessToken
 from chimu.v1.error_codes import *
 from starlette.responses import JSONResponse, RedirectResponse
 from starlette.requests import Request
-
+from urllib.parse import quote
 
 async def download_set(request: Request):
     set_id = request.path_params.get('set_id')
@@ -33,6 +33,6 @@ async def download_set(request: Request):
     if beatmap['IpfsHash'] == None or beatmap['IpfsHash'] == '':
         return Error(404, ERR_CODE_BEATMAP_UNAVAILABLE, f'Error: Beatmap unavailable!')
 
-    return RedirectResponse(f'https://ipfs.chimu.moe/ipfs/{beatmap["IpfsHash"]}?filename={beatmap["File"]}')
+    return RedirectResponse(f'https://ipfs.chimu.moe/ipfs/{beatmap["IpfsHash"]}?filename={quote(beatmap["File"])}')
 
     #return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')
