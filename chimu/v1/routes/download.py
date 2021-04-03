@@ -28,17 +28,7 @@ async def download_set(request: Request):
 
     beatmap = await RequestDownload(set_id, no_video)
     if beatmap == None:
-        if no_video == 1 or no_video:
-            no_video = 0
-        else:
-            no_video = 1
-        
-        # If the above failed, try again with/out video
-        beatmap = await RequestDownload(set_id, no_video)
-            
-        # Otherwise just fail.
-        if beatmap == None:
-            return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')
+        return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')
 
     if beatmap['IpfsHash'] == None or beatmap['IpfsHash'] == '':
         return Error(404, ERR_CODE_BEATMAP_UNAVAILABLE, f'Error: Beatmap unavailable!')
