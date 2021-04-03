@@ -53,7 +53,7 @@ def InitializeRedis():
 
 async def Request(key: str, obj: any):
     time_current = time.time()
-    time_deadline = time_current + 15
+    time_deadline = time_current + 5
 
     id = str(uuid.uuid4())
 
@@ -68,6 +68,8 @@ async def Request(key: str, obj: any):
             return res
 
         time_current = time.time()
+        
+        time.sleep(100)
 
     return None
 
@@ -86,5 +88,5 @@ def DownloadResponseHandler(rmsg):
 async def RequestDownload(set_id: int, no_video: bool):
     return await Request(f'downloads', {
         'SetId': set_id,
-        'NoVideo': no_video
+        'NoVideo': int(no_video)
     })
