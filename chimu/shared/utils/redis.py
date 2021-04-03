@@ -85,8 +85,8 @@ def DownloadResponseHandler(rmsg):
     downloadMap[data['_ID']] = data
 
 
-async def RequestDownload(set_id: int, no_video: bool):
+async def RequestDownload(set_id: int, no_video):
     return await Request(f'downloads', {
         'SetId': set_id,
-        'NoVideo': int(no_video)
+        'NoVideo': no_video
     })
