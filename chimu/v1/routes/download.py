@@ -29,8 +29,8 @@ async def download_set(request: Request):
     beatmap = await RequestDownload(set_id, no_video)
     if beatmap == None:
         # If the above failed, try again with/out video
-        if beatmap == None:
-            beatmap = await RequestDownload(set_id, !no_video ? 1 : 0)
+        beatmap = await RequestDownload(set_id, int(no_video))
+            
         # Otherwise just fail.
         if beatmap == None:
             return Error(404, ERR_CODE_BEATMAP_NOT_FOUND, f'Error: Beatmap not found!')
