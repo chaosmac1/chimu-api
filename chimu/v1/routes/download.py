@@ -29,7 +29,7 @@ async def download_set(request: Request):
     beatmap = await RequestDownload(set_id, no_video)
     if beatmap == None:
         # If the above failed, try again with/out video
-        beatmap = await RequestDownload(set_id, int(no_video))
+        beatmap = await RequestDownload(set_id, int(not no_video))
             
         # Otherwise just fail.
         if beatmap == None:
