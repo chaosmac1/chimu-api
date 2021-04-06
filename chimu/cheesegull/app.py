@@ -3,6 +3,7 @@ from chimu.shared.utils.mysql import InitializeMySQL
 from chimu.shared.utils.datadog import InitializeDatadog
 from chimu.shared.utils.redis import InitializeRedis
 
+from chimu.cheesegull.routes.get_map_md5 import get_map_md5
 from chimu.cheesegull.routes.get_map import get_map
 from chimu.cheesegull.routes.get_set import get_set
 from chimu.cheesegull.routes.search import search
@@ -25,6 +26,7 @@ async def homepage(request):
 
 app = Starlette(routes=[
     Route('/', homepage),
+    Route('/api/cheesegull/md5/{map_md5}', get_map_md5),
     Route('/api/cheesegull/b/{map_id}', get_map),
     Route('/api/cheesegull/s/{set_id}', get_set),
     Route('/api/cheesegull/search', search),
