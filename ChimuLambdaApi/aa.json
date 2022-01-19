@@ -1,0 +1,1208 @@
+{
+  'databaseSize': 1525710854,
+  'lastUpdate': '2021-07-23T12: 46: 36.555015230Z',
+  'indexes': {
+    'pisstaube': {
+      'numberOfDocuments': 165599,
+      'isIndexing': True,
+      'fieldsDistribution': {
+        'approvedDate': 165593,
+        'ar': 165594,
+        'artist': 165593,
+        'bpm': 165594,
+        'creator': 165593,
+        'cs': 165594,
+        'diffName': 165594,
+        'difficultyRating': 165594,
+        'genre': 165595,
+        'hp': 165594,
+        'id': 165593,
+        'language': 165594,
+        'mode': 165593,
+        'od': 165594,
+        'rankedStatus': 165593,
+        'tags': 165593,
+        'title': 165593,
+        'totalLength': 165594
+      }
+    }
+  }
+}
+{
+  'hits': [
+    {
+      'id': 1494410,
+      'rankedStatus': 1,
+      'artist': 'Yasuda Rei',
+      'title': 'Passcode 4854 (TV Size)',
+      'creator': 'Aakki',
+      'tags': [
+        'ending',
+        'kindaichi',
+        'shounen',
+        'no',
+        'jikenbo',
+        'r',
+        'returns',
+        'リターンズ',
+        'file',
+        'of',
+        'young',
+        'japanese',
+        'anime',
+        'pop',
+        'jpop',
+        'j-pop',
+        'kuki1537'
+      ],
+      'mode': [
+        0,
+        0,
+        0,
+        0
+      ],
+      'diffName': [
+        'Dream',
+        'Hard',
+        'Normal',
+        "Kuki's Insane"
+      ],
+      'cs': [
+        4,
+        3.6,
+        3.2,
+        3.8
+      ],
+      'ar': [
+        8.6,
+        7.5,
+        5,
+        8
+      ],
+      'od': [
+        8.4,
+        6.4,
+        4,
+        7.5
+      ],
+      'hp': [
+        5,
+        4,
+        3,
+        4.5
+      ],
+      'difficultyRating': [
+        4.23,
+        3,
+        1.8,
+        3.74
+      ],
+      'bpm': [
+        140,
+        140,
+        140,
+        140
+      ],
+      'totalLength': [
+        234,
+        183,
+        156,
+        236
+      ],
+      'genre': 5,
+      'language': 3,
+      'approvedDate': 1624564982
+    },
+    {
+      'id': 1408427,
+      'rankedStatus': 1,
+      'artist': 'YOASOBI',
+      'title': 'Yasashii Suisei (TV Size)',
+      'creator': 'Souvenir',
+      'tags': [
+        'cyanus',
+        'madoka2574',
+        'second',
+        'season',
+        '2nd',
+        'ending',
+        'ed',
+        'ビースターズ',
+        'japanese',
+        'anime',
+        'pop',
+        'jpop',
+        'j-pop',
+        '幾田りら',
+        'ikuta',
+        'rira',
+        'lilas',
+        'ayase',
+        'ikura',
+        'sony',
+        'music',
+        'entertainment',
+        'japan',
+        'female',
+        'vocal',
+        'bst',
+        'gentle',
+        'comet'
+      ],
+      'mode': [
+        2,
+        2,
+        2,
+        2
+      ],
+      'diffName': [
+        "Cyanus' Cup",
+        "Madoka's Platter",
+        'Salad',
+        'Stars'
+      ],
+      'cs': [
+        2.8,
+        3.6,
+        3.2,
+        4
+      ],
+      'ar': [
+        5.8,
+        7.8,
+        6.8,
+        8.8
+      ],
+      'od': [
+        5.8,
+        7.8,
+        6.8,
+        8.8
+      ],
+      'hp': [
+        3,
+        5,
+        4,
+        6
+      ],
+      'difficultyRating': [
+        1.45,
+        2.83,
+        2.19,
+        3.55
+      ],
+      'bpm': [
+        90,
+        90,
+        90,
+        90
+      ],
+      'totalLength': [
+        114,
+        203,
+        189,
+        264
+      ],
+      'genre': 3,
+      'language': 3,
+      'approvedDate': 1624374198
+    },
+    {
+      'id': 1409421,
+      'rankedStatus': 3,
+      'artist': 'mary',
+      'title': 'Kimi no Yozora Shoukaihan',
+      'creator': 'KeyWee',
+      'tags': [
+        'orangestar',
+        'cover',
+        'utaite',
+        'night',
+        'sky',
+        'patrol',
+        'of',
+        'tomorrow',
+        '歌い手',
+        'rock',
+        'japanese',
+        'vocaloid',
+        'ia',
+        'asu',
+        'j-rock',
+        'jrock',
+        'livermorium',
+        'mikanseip',
+        'りする',
+        'risru',
+        '初音ミク',
+        'hatsune',
+        'miku'
+      ],
+      'mode': [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      'diffName': [
+        'Expert',
+        "Livermorium's Endless Journey Through the Bright Night Sky",
+        'Hard',
+        'Insane',
+        'Normal'
+      ],
+      'cs': [
+        4,
+        4.2,
+        3.5,
+        4,
+        3
+      ],
+      'ar': [
+        9.1,
+        9.3,
+        8,
+        9,
+        6
+      ],
+      'od': [
+        8.5,
+        9,
+        6.5,
+        7.5,
+        4
+      ],
+      'hp': [
+        5.5,
+        6,
+        4.5,
+        5,
+        4
+      ],
+      'difficultyRating': [
+        5.53,
+        6.16,
+        3.47,
+        4.75,
+        2.51
+      ],
+      'bpm': [
+        185,
+        185,
+        185,
+        185,
+        185
+      ],
+      'totalLength': [
+        698,
+        781,
+        491,
+        605,
+        382
+      ],
+      'genre': 4,
+      'language': 3,
+      'approvedDate': 1624319950
+    },
+    {
+      'id': 1154776,
+      'rankedStatus': 3,
+      'artist': 'Se-U-Ra',
+      'title': 'Tsui no Maihime',
+      'creator': 'DarkistDeci',
+      'tags': [
+        'featured',
+        'artist',
+        'dubstek',
+        'せゆーら',
+        'tree',
+        'called',
+        'elif',
+        'ethnic',
+        'hardcore',
+        'seura',
+        'seyura',
+        'instrumental',
+        'famoss',
+        'video',
+        'game',
+        'ost',
+        'rhythm',
+        'game',
+        'electronic',
+        'edm',
+        'artcore',
+        'ragnarok',
+        'vii',
+        'fa',
+        'featured',
+        'artist'
+      ],
+      'mode': [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      'diffName': [
+        '[
+        4K
+      ]
+      Casual
+      ', '
+    [
+      4K
+    ]
+    Normal
+    ', '
+    [
+      4K
+    ]
+    Collab
+    Mega
+    ', '
+    [
+      4K
+    ]
+    Giga
+    ', '
+    [
+      4K
+    ]
+    Hard
+    ',
+    "[4K] Dub's Tera"
+  ],
+  'cs': [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  'ar': [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  'od': [
+    6.5,
+    7,
+    8,
+    8.2,
+    7.5,
+    8.5
+  ],
+  'hp': [
+    6.5,
+    7,
+    8,
+    8.5,
+    7.5,
+    8.7
+  ],
+  'difficultyRating': [
+    1.36,
+    2.08,
+    3.73,
+    4.75,
+    3.14,
+    5.31
+  ],
+  'bpm': [
+    202,
+    202,
+    202,
+    202,
+    202,
+    202
+  ],
+  'totalLength': [
+    365,
+    624,
+    1305,
+    1520,
+    1015,
+    1693
+  ],
+  'genre': 2,
+  'language': 5,
+  'approvedDate': 1624243297
+},
+{'id': 1062770, 'rankedStatus': 1, 'artist': 'Imy', 'title': 'Meteora', 'creator': 'MiyohashiKoori', 'tags': [
+'japanese', 'rock', 'jrock', 'j-rock', 'みゅー', 'myu', 'アイミー', 'fa', 'featured', 'artist', 'aitsuki', 'nakuru', '藍月なくる', 'gfmrt', 'riana', '-', 'azrael', 'leo16834', 'loneight', 'kwaimsuckasfuk', 'ohm002', 'l18'
+], 'mode': [
+0,
+0,
+0,
+0,
+0,
+0
+], 'diffName': [
+'Falling Star',
+"L18's Light Insane",
+"leo16834's Hard",
+"GfMRT's Expert",
+"Kw's Insane",
+"Riana's Extra"
+], 'cs': [
+4.5,
+4,
+3.5,
+4,
+4,
+4
+], 'ar': [
+9.7,
+9,
+8,
+9.3,
+9.1,
+9.5
+], 'od': [
+8.8,
+7.5,
+6,
+8.5,
+8,
+8.5
+], 'hp': [
+4,
+5,
+4,
+5,
+5,
+5
+], 'difficultyRating': [
+6.84,
+3.9,
+3.27,
+5.48,
+4.72,
+6.42
+], 'bpm': [
+132,
+132,
+132,
+132,
+132,
+132
+], 'totalLength': [
+1084,
+688,
+484,
+969,
+799,
+922
+], 'genre': 4, 'language': 3, 'approvedDate': 1624186924
+},
+{
+'id': 1441554, 'rankedStatus': 3, 'artist': 'HoneyWorks', 'title': 'Heroine Ikusei Keikaku feat. Suzumi Hiyori (CV: Minase Inori)', 'creator': 'sanairrt', 'tags': [
+'好きすぎてやばい。〜告白実行委員会キャラクターソング集〜', 'hiroin', 'suki', 'sugite', 'yabai', 'kokuhaku', 'jikkou', 'iinkai', 'character', 'song', 'shu', 'japanese', 'pop', 'jpop', 'j-pop', 'ハニーワークス', 'ハニワ', 'haniwa', 'premium', 'live', 'プレミアムライブ', 'ハニプレ', 'arronchu1207', 'oriental', 'not', 'dt', 'farmer'
+], 'mode': [
+0,
+0,
+0,
+0
+], 'diffName': [
+'Insane',
+"Chu's Hard", 'Princess',
+"Oriental's Normal"
+], 'cs': [
+3.8,
+3.8,
+4,
+3
+], 'ar': [
+9,
+8,
+9.2,
+5.5
+], 'od': [
+7.5,
+6.5,
+8.5,
+4.2
+], 'hp': [
+5,
+4.6,
+6,
+4
+], 'difficultyRating': [
+4.48,
+3.68,
+5.36,
+2.37
+], 'bpm': [
+180,
+180,
+180,
+180
+], 'totalLength': [
+692,
+680,
+778,
+499
+], 'genre': 5, 'language': 3, 'approvedDate': 1624070837
+},
+{
+'id': 1429816, 'rankedStatus': 1, 'artist': 'Mashiro', 'title': 'Ano Natsu ga Houwa Suru.', 'creator': 'Abelia', 'tags': [
+'カンザキイオリ', 'kanzaki', 'iori', 'nijisanji', '2434', 'vtuber', 'japanese', 'rock', 'vocaloid', 'cover', 'vtuber', 'virtual', 'youtuber', '△○□×', 'miwasiba', '快晴p'
+], 'mode': [
+0
+], 'diffName': [
+'Flight from reality.'
+], 'cs': [
+4
+], 'ar': [
+9.3
+], 'od': [
+8.4
+], 'hp': [
+6
+], 'difficultyRating': [
+5.72
+], 'bpm': [
+180
+], 'totalLength': [
+1133
+], 'genre': 4, 'language': 3, 'approvedDate': 1624039408
+},
+{
+'id': 1270255, 'rankedStatus': 3, 'artist': 'siqlo', 'title': 'parsley', 'creator': 'FAMoss', 'tags': [
+'featured', 'artist', 'fa',
+"mappers'", 'guild', 'mg', 'saikuro', 'cute', 'chibi', 'future', 'bass', 'frenz2019', 'electronic', 'instrumental', 'core'
+], 'mode': [
+3,
+3,
+3,
+3,
+3
+], 'diffName': [
+'[
+4K
+] easy', '[
+4K
+] hard', '[
+4K
+] insane', '[
+4K
+] kitch/en', '[
+4K
+] normal'
+], 'cs': [
+4,
+4,
+4,
+4,
+4
+], 'ar': [
+5,
+5,
+5,
+5,
+5
+], 'od': [
+7,
+8,
+8.5,
+8.2,
+7.5
+], 'hp': [
+7,
+8,
+8.5,
+8.8,
+7.5
+], 'difficultyRating': [
+1.48,
+2.99,
+3.76,
+4.44,
+1.96
+], 'bpm': [
+180,
+180,
+180,
+180,
+180
+], 'totalLength': [
+330,
+1006,
+1234,
+1439,
+600
+], 'genre': 10, 'language': 5, 'approvedDate': 1624019913
+},
+{
+'id': 1445592, 'rankedStatus': 3, 'artist': 'Hebe Tien', 'title': 'A Little Happiness', 'creator': 'Present', 'tags': [
+'小幸运', 'xiao', 'xing', 'yun', 'darren', 'wang', 'dino', 'lee', 'vivian', 'sung', 'dewi', 'chien', 'chinese', 'pop', 'kencho', '主题曲', 'taiwanese', 'film', 'movie', 'angelsnow'
+], 'mode': [
+0
+], 'diffName': [
+'Our Lucky Times'
+], 'cs': [
+4
+], 'ar': [
+8.5
+], 'od': [
+8.5
+], 'hp': [
+4
+], 'difficultyRating': [
+5.16
+], 'bpm': [
+79
+], 'totalLength': [
+543
+], 'genre': 5, 'language': 4, 'approvedDate': 1623996223
+},
+{
+'id': 1369259, 'rankedStatus': 3, 'artist': 'CHiCO with HoneyWorks', 'title': 'Minikui Ikimono (TV Size)', 'creator': 'Aerous', 'tags': [
+'otherside', 'picnic', 'urasekai', 'op', 'opening', 'japanese', 'anime', 'pop', 'j-pop', 'jpop', 'oninomori', '鬼ノ森', '13th', 'シングル', 'single', 'gom', 'ゴム', 'shito', '使徒', 'yamako', 'ヤマコ', '城山綾子'
+], 'mode': [
+0,
+0,
+0,
+0,
+0,
+0
+], 'diffName': [
+'Unrequited Love', 'Extra', 'Easy', 'Hard', 'Insane', 'Normal'
+], 'cs': [
+4,
+4,
+3,
+4,
+4,
+3
+], 'ar': [
+9.4,
+9.3,
+3,
+8,
+9,
+5.5
+], 'od': [
+8.5,
+8,
+2,
+6,
+7,
+4
+], 'hp': [
+6,
+6,
+2,
+5,
+6,
+4
+], 'difficultyRating': [
+6.13,
+5.73,
+1.92,
+3.74,
+4.89,
+2.44
+], 'bpm': [
+195,
+195,
+195,
+195,
+195,
+195
+], 'totalLength': [
+417,
+402,
+126,
+277,
+360,
+172
+], 'genre': 3, 'language': 3, 'approvedDate': 1623981827
+},
+{
+'id': 1450489, 'rankedStatus': 3, 'artist': 'Ishihara Kaori', 'title': 'Plastic Smile', 'creator': 'Astronic', 'tags': [
+'kyrian', 'blast', 'blastthekidd', 'honne', 'i', 'shaved', 'then', 'i', 'brought', 'a', 'high', 'school', 'girl', 'home', 'higehiro', 'hige', 'wo', 'soru', 'soshite', 'joshikousei', 'hirou', 'anime', 'japanese', 'pop', 'jpop', 'j-pop', 'female', 'vocals', 'ending', 'ed', '荻原', '沙優', 'ogiwara', 'sayu'
+], 'mode': [
+0
+], 'diffName': [
+'Together'
+], 'cs': [
+4
+], 'ar': [
+9
+], 'od': [
+8.8
+], 'hp': [
+5.5
+], 'difficultyRating': [
+5.25
+], 'bpm': [
+167
+], 'totalLength': [
+1005
+], 'genre': 5, 'language': 3, 'approvedDate': 1623972671
+},
+{
+'id': 1424120, 'rankedStatus': 1, 'artist': 'Silentroom', 'title': 'Nhelv', 'creator': 'Fisky', 'tags': [
+'long', 'full', 'ver', 'version', 'rainbow', 'frontier', '2020', 'remaster', 'dnb',
+"drum'n'bass", 'neurostep', 'neurofunk', 'electronic', 'instrumental', 'memory', 'waves', 'slrm-0002', '2', 'minutes', 'works', 'katastrophe', 'fa', 'featured', 'artist', 'bofu', 'bofu2017', 'sdvx', 'vw', '5', 'sound', 'voltex', 'vivid', 'wave', 'chunithm', 'the', 'bms', 'of', 'fighters', 'ultimate', '2017', '-legenda', 'est', 'a', 'myth-'
+], 'mode': [
+0
+], 'diffName': [
+'Frustrated'
+], 'cs': [
+4
+], 'ar': [
+9.7
+], 'od': [
+8.7
+], 'hp': [
+4.6
+], 'difficultyRating': [
+6.83
+], 'bpm': [
+175.89
+], 'totalLength': [
+1617
+], 'genre': 10, 'language': 5, 'approvedDate': 1623960228
+},
+{
+'id': 1425359, 'rankedStatus': 3, 'artist': 'Raytoly', 'title': "Back To You ~Raytoly's Together Remix~", 'creator': 'Raytoly', 'tags': [
+'rhytoly', 'and', 'core', '&', 'ai', '~the', 'delicate', 'girl~', 'crystal', 'stars', 'world', 'remix', 'uk', 'happy', 'hardcore', 'house', 'classic', 'electronic', 'instrumental'
+], 'mode': [
+1,
+1,
+1,
+1,
+1,
+1
+], 'diffName': [
+'Me & You', 'Inner Oni', 'Futsuu', 'Kantan', 'Muzukashii', 'Oni'
+], 'cs': [
+5,
+5,
+5,
+5,
+5,
+5
+], 'ar': [
+10,
+10,
+10,
+10,
+10,
+10
+], 'od': [
+7,
+6.5,
+4,
+3,
+5,
+5.5
+], 'hp': [
+5,
+5.5,
+7,
+7.5,
+6.5,
+6
+], 'difficultyRating': [
+6.4,
+5.58,
+2.79,
+2,
+3.74,
+4.93
+], 'bpm': [
+200,
+200,
+200,
+200,
+200,
+200
+], 'totalLength': [
+800,
+684,
+261,
+160,
+374,
+551
+], 'genre': 10, 'language': 5, 'approvedDate': 1623953432
+},
+{
+'id': 1361614, 'rankedStatus': 3, 'artist': 'HIMEHINA', 'title': 'Hitogata Rock', 'creator': 'dkblaze', 'tags': [
+'yuuma', 'shizuku-', 'kazato', 'asa', 'shikibe', 'mayu', 'amateurre', 'heilia', 'virtual', 'youtuber', 'vtuber', '藍の華', '田中ヒメ', '鈴木ヒナ', 'tanaka', 'hime', 'suzuki', 'hina', 'jpop', 'j-pop', 'pop', 'jrock', 'j-rock', 'rock', 'female', 'vocal', 'divine', 'flowers', 'japanese'
+], 'mode': [
+0,
+0,
+0,
+0
+], 'diffName': [
+"Asa's Insane", 'Extra', 'Collab Hard',
+"Amalia's Expert"
+], 'cs': [
+3.8,
+3.8,
+3.5,
+4
+], 'ar': [
+9,
+9.3,
+8,
+9.2
+], 'od': [
+8,
+9,
+6,
+8.5
+], 'hp': [
+5,
+6,
+4.5,
+5
+], 'difficultyRating': [
+4.86,
+6.19,
+3.51,
+5.67
+], 'bpm': [
+158,
+158,
+158,
+158
+], 'totalLength': [
+1026,
+1267,
+680,
+1229
+], 'genre': 4, 'language': 3, 'approvedDate': 1623921028
+},
+{
+'id': 1450065, 'rankedStatus': 3, 'artist': 'Ado', 'title': 'Odo', 'creator': 'Beren', 'tags': [
+'lobelia', 'anya_melfissa', 'anya', 'melfissa', 'kyutei', 'deco*27', 'giga', 'teddyloid', 'かゆか', '藍瀬', 'まなみ', 'orihara', 'dance', 'japanese', 'rap', 'pop'
+], 'mode': [
+0,
+0,
+0,
+0,
+0
+], 'diffName': [
+'K.O.', 'Normal', 'Hard',
+"Lobelia's Expert",
+"Kyutei's Insane"
+], 'cs': [
+4,
+3,
+3.5,
+4,
+5
+], 'ar': [
+9.3,
+5,
+7.5,
+9.2,
+9
+], 'od': [
+8.4,
+5,
+6,
+8.2,
+8
+], 'hp': [
+6,
+4,
+5,
+6,
+5
+], 'difficultyRating': [
+6.3,
+2.58,
+3.31,
+5.09,
+4.45
+], 'bpm': [
+128,
+128,
+128,
+128,
+128
+], 'totalLength': [
+822,
+341,
+546,
+829,
+738
+], 'genre': 5, 'language': 3, 'approvedDate': 1623919977
+},
+{
+'id': 1450814, 'rankedStatus': 3, 'artist': 'YUKI', 'title': 'Sayonara Bystander (TV Size)', 'creator': 'Glaceon', 'tags': [
+'march', 'comes', 'in', 'like', 'a', 'sangatsu', '3-gatsu', 'no', 'lion', 'anime', 'female', 'vocals', 'japanese', 'jpop', 'j-pop', 'pop', 'op', 'opening', 'second', '2nd'
+], 'mode': [
+0,
+0,
+0
+], 'diffName': [
+'Insane', 'Hard', 'Normal'
+], 'cs': [
+4,
+3.5,
+3
+], 'ar': [
+9,
+7.5,
+5
+], 'od': [
+8,
+6,
+4
+], 'hp': [
+5,
+4,
+3
+], 'difficultyRating': [
+4.55,
+3.33,
+2.13
+], 'bpm': [
+163,
+163,
+163
+], 'totalLength': [
+283,
+250,
+170
+], 'genre': 3, 'language': 3, 'approvedDate': 1623877194
+},
+{
+'id': 1442963, 'rankedStatus': 3, 'artist': 'PUP', 'title': 'DVP', 'creator': 'attendant', 'tags': [
+'english', 'indie', 'punk', 'rock', 'the', 'dream', 'is', 'over', 'pathetic', 'use', 'of', 'potential', 'don', 'valley', 'parkway', 'park', 'way', 'featured', 'artist', 'fa'
+], 'mode': [
+0,
+0,
+0,
+0,
+0,
+0,
+0
+], 'diffName': [
+'Expert', 'Another', 'Easy', 'Normal', 'Hard', 'Insane', 'Extra'
+], 'cs': [
+4.5,
+4.2,
+2.5,
+3,
+3.5,
+4.3,
+4
+], 'ar': [
+9.8,
+9.3,
+4,
+6,
+8,
+9,
+9.6
+], 'od': [
+10,
+9,
+3,
+5,
+7,
+8,
+9.5
+], 'hp': [
+5,
+5,
+2,
+3,
+4,
+4.5,
+5
+], 'difficultyRating': [
+7.66,
+5.62,
+1.66,
+2.73,
+3.63,
+4.57,
+6.87
+], 'bpm': [
+296,
+296,
+296,
+296,
+296,
+296,
+296
+], 'totalLength': [
+757,
+692,
+144,
+267,
+483,
+619,
+761
+], 'genre': 4, 'language': 2, 'approvedDate': 1623869714
+},
+{
+'id': 1406361, 'rankedStatus': 3, 'artist': "Ariabl'eyeS", 'title': 'Aurora', 'creator': 'Esutarosa', 'tags': [
+'1st', 'album', '碧き幻想のエリジウム', 'ariableyes', 'featured', 'artist', 'リゼ', 'symphonic', 'piano', 'lyse', 'luna', 'rena', 'gothic', 'violin', 'vocals', 'vocalist', 'japanese', 'pop', 'fa', 'fergas'
+], 'mode': [
+0
+], 'diffName': [
+'Radiance'
+], 'cs': [
+4
+], 'ar': [
+9
+], 'od': [
+8
+], 'hp': [
+4.5
+], 'difficultyRating': [
+4.62
+], 'bpm': [
+120
+], 'totalLength': [
+874
+], 'genre': 5, 'language': 3, 'approvedDate': 1623866978
+},
+{
+'id': 1381677, 'rankedStatus': 1, 'artist': 'Kamiyama Yoh', 'title': 'Irokousui (TV Size)', 'creator': 'kanpakyin', 'tags': [
+'堀さんと宮村くん', 'horimiya', 'japanese', 'jpop', 'j-pop', 'pop', 'anime', 'hori', 'san', 'and', 'to', 'miyamura', 'kun'
+], 'mode': [
+0,
+1,
+1,
+1,
+0,
+1,
+0,
+0,
+0
+], 'diffName': [
+'Easy', 'Futsuu', 'Kantan', 'Muzukashii', 'Normal', 'Oni', 'Perfume', 'Hard', 'Insane'
+], 'cs': [
+3.5,
+5,
+5,
+5,
+4,
+5,
+4.4,
+4,
+4.2
+], 'ar': [
+4.5,
+5,
+5,
+5,
+5.5,
+5,
+8.9,
+7.3,
+8
+], 'od': [
+3,
+4,
+3,
+4.5,
+5,
+5.5,
+8,
+6,
+7
+], 'hp': [
+3,
+7.5,
+8,
+7,
+5,
+6,
+6.5,
+5,
+5.5
+], 'difficultyRating': [
+1.71,
+2.43,
+1.64,
+3.14,
+1.97,
+3.79,
+4.72,
+3.25,
+3.73
+], 'bpm': [
+148,
+148,
+148,
+148,
+148,
+148,
+148,
+148,
+148
+], 'totalLength': [
+112,
+241,
+146,
+338,
+172,
+422,
+312,
+267,
+284
+], 'genre': 3, 'language': 3, 'approvedDate': 1623849882
+},
+{
+'id': 1430973, 'rankedStatus': 1, 'artist': 'Tokai Teio (CV: Machico), Mejiro McQueen (CV: Onishi Saori)', 'title': 'Komorebi no Yell', 'creator': 'Little', 'tags': [
+'uma', 'musume', 'pretty', 'derby', 'umamusume', 'anime', 'ed', 'ending', 'japanese', 'pop', 'jpop', 'j-pop', '2nd', 'full', 'toukai', 'teiou', 'oonishi', 'cloudsplash16', 'kyle73', 'horse', 'girls'
+], 'mode': [
+0,
+0,
+0
+], 'diffName': [
+'Believe', 'Hard', 'Normal'
+], 'cs': [
+4,
+4,
+3.5
+], 'ar': [
+8.5,
+7,
+5
+], 'od': [
+6.5,
+6,
+4
+], 'hp': [
+6,
+5,
+4
+], 'difficultyRating': [
+4.28,
+3.22,
+1.84
+], 'bpm': [
+130,
+130,
+130
+], 'totalLength': [
+825,
+601,
+419
+], 'genre': 3, 'language': 3, 'approvedDate': 1623810165
+}
+], 'offset': 0, 'limit': 20, 'nbHits': 81824, 'exhaustiveNbHits': False, 'processingTimeMs': 36, 'query': 'a'
+}
+[
+acivev@rhel-8 ~
+]$

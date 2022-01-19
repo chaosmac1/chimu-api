@@ -4,8 +4,8 @@ namespace ChimuLambdaApi;
 public class Beatmap {
     public int BeatmapId { get; set; }
     public int ParentSetId { get; set; }
-    public string DiffName { get; set; }
-    public string FileMd5 { get; set; }
+    public string? DiffName { get; set; }
+    public string? FileMd5 { get; set; }
     public int Mode { get; set; }
     public double Bpm { get; set; }
     public float Ar { get; set; }
@@ -18,5 +18,5 @@ public class Beatmap {
     public int Passcount { get; set; }
     public long MaxCombo { get; set; }
     public double DifficultyRating { get; set; }
-    public string File { get; set; }
+    public string? File { get; set; }
 }

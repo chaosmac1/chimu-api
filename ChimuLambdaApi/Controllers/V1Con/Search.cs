@@ -2,19 +2,27 @@ using System.Net;
 using System.Text;
 using System.Web.Http;
 using ChimuLambdaApi.LibDatabase;
+using Index = Meilisearch.Index;
 
 namespace ChimuLambdaApi.Controllers.V1Con;
 
 public static class Search {
     public static V1Controller.GetSearchBeatmapSetRes SearchBy(ref LibDatabase.Search.FindBeatmapValue findBy) {
-        var res = LibDatabase.Search.FindBeatmaps(GetDb.GetDbBeatmap(), ref findBy);
-
+        IEnumerable<MeiliPisstaube> res;
+        {
+            Index? meilIndex = GetDb.GetDbBeatmap();
+            if (meilIndex is null)
+                return new V1Controller.GetSearchBeatmapSetRes() { code = 409, message = String.Empty };
+            res = LibDatabase.Search.FindBeatmaps(meilIndex, ref findBy);
+        }
+        
+        
         if (!res.Any())
             throw new HttpResponseException(HttpStatusCode.NotFound);
 
         var beatmapSetIdsBuilder = new StringBuilder();
         foreach (var beatmap in res)
-            beatmapSetIdsBuilder.Append($"{beatmap.BeatmapId},");
+            beatmapSetIdsBuilder.Append($"{beatmap.Id},");
         var beatmapSetIds = beatmapSetIdsBuilder.ToString();
         beatmapSetIds = beatmapSetIds[..^1];
 
@@ -67,6 +75,7 @@ public static class Search {
 
             while (reader.Read()) {
                 var set = beatmapSetRaw[(int) reader[1]];
+                set.ChildrenBeatmaps ??= new List<V1Controller.BeatmapSetPlusChilds.BeatmapChild>(10);
                 set.ChildrenBeatmaps.Add(new V1Controller.BeatmapSetPlusChilds.BeatmapChild {
                     BeatmapId = (int) reader[0],
                     ParentSetId = (int) reader[1],

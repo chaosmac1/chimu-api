@@ -8,13 +8,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="HiNetCloud.System.Web.Http.WebHost" Version="21.8.4.8"/>
-        <PackageReference Include="MeiliSearch" Version="0.8.0"/>
-        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="HiNetCloud.System.Web.Http.WebHost" Version="21.8.4.8" />
+        <PackageReference Include="MeiliSearch" Version="0.8.0" />
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+        <PackageReference Include="StackExchange.Redis" Version="2.2.88" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Npgsql.ConfigureConnection" Version="0.1.1"/>
+        <PackageReference Include="Npgsql.ConfigureConnection" Version="0.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Utils" />
     </ItemGroup>
 </Project>

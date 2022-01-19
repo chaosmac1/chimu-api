@@ -1,5 +1,7 @@
+#nullable enable
 using Meilisearch;
 using Npgsql;
+using StackExchange.Redis;
 using Index = Meilisearch.Index;
 
 namespace ChimuLambdaApi.LibDatabase;
@@ -48,5 +50,52 @@ public static class GetDb {
 #else
         catch (Exception) { return null; }
 #endif
+    }
+    
+    public static ConnectionMultiplexer? GetRedis() => LazyConnection?.Value;
+    
+    public static IDatabase? GetRedisDataBase() => GetRedis()?.GetDatabase();
+
+
+    private static Lazy<ConnectionMultiplexer> LazyConnection = LazyConnectionInit();
+    
+    private static Lazy<ConnectionMultiplexer> LazyConnectionInit() {
+        Console.WriteLine("Redis: Initializing...");
+        try {
+            LazyConnection = new Lazy<ConnectionMultiplexer>(() => {
+                var configurationOptions = new ConfigurationOptions() {
+                    Password = Config.Redis.Passwd,
+                };
+                configurationOptions.EndPoints.Add(host: Config.Redis.Address, port: Config.Redis.Port);
+                return ConnectionMultiplexer.Connect(configurationOptions);
+            });
+
+            Console.WriteLine("Ping Test");
+            if (!LazyConnection.Value.GetDatabase().PingAsync().Wait(1000)) {
+                Console.WriteLine("Redis: Couldn\'t establish a redis connection!");
+                Console.WriteLine("Exiting...");
+                System.Environment.Exit(1);
+            }
+            Console.WriteLine("Redis: Succeded.");
+            Console.WriteLine("Redis: Setup redis pub/sub");
+            
+            Console.WriteLine("Redis: Subscribe Not Implemented ");
+            
+            
+            var subscriber = LazyConnection.Value.GetSubscriber();
+            
+            subscriber.Subscribe(new RedisChannel("chimu:s:downloads", RedisChannel.PatternMode.Auto),
+                RedistRequest.SubscribeDownloadResponseHandler);
+            
+            return LazyConnection;
+        }
+#if DEBUG
+        catch (Exception e) {
+            Console.WriteLine(e);
+            throw;
+        }
+#else
+        catch(Exception) { return null; }
+#endif    
     }
 }

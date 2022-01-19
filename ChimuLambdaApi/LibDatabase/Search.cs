@@ -5,7 +5,7 @@ using Index = Meilisearch.Index;
 namespace ChimuLambdaApi.LibDatabase; 
 
 public static class Search {
-    public static IEnumerable<Beatmap> FindBeatmaps(Index meiliIndex, ref FindBeatmapValue props) {
+    public static IEnumerable<MeiliPisstaube> FindBeatmaps(Index meiliIndex, ref FindBeatmapValue props) {
         var filterBuilder = new StringBuilder(20);
 
         if (props.Mode != -1)
@@ -87,17 +87,17 @@ public static class Search {
 
 
         try {
-            var taskRes = meiliIndex.Search<Beatmap>(filterBuilder.ToString(), new SearchQuery {
+            var taskRes = meiliIndex.Search<MeiliPisstaube>(filterBuilder.ToString(), new SearchQuery {
                 AttributesToHighlight = new[] {"title", "artist", "tags", "creator", "diffName"},
                 Limit = props.Amount,
                 Offset = props.Offset,
                 Filter = filterBuilder.ToString(),
                 Matches = true
             });
-            if (taskRes is null) return new List<Beatmap>(0);
+            if (taskRes is null) return new List<MeiliPisstaube>(0);
             taskRes.Wait();
             var res = taskRes.Result;
-            if (res is null) return new List<Beatmap>(0);
+            if (res is null) return new List<MeiliPisstaube>(0);
 
             return res.Hits;
         }

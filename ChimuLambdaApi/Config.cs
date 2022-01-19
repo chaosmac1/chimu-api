@@ -37,4 +37,15 @@ public static class Config {
         public static string Url => _url != "" ? _url : throw new Exception(nameof(_url) + " is \"\"");
         public static string Db => _db != "" ? _db : throw new Exception(nameof(_db) + " is \"\"");
     }
+    
+    public static class Redis {
+        private const string _address = "";
+        private const string _db = "";
+        private const int _port = 0;
+        private const string _passwd = "";
+        public static string Address => _address.Length != 0? _address: throw new Exception(nameof(_address) + " is \"\"");
+        public static string Db => _db.Length != 0? _db: throw new Exception(nameof(_db) + " is \"\"");
+        public static int Port => _port != 0 ? _port : throw new Exception(nameof(_port) + " is  0");
+        public static string Passwd => _passwd != "" ? _passwd : throw new Exception(nameof(_passwd) + " is \"\"");
+    }
 }
